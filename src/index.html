@@ -7,11 +7,53 @@
     <div class="wrapper">
       @@include('html/header.html', {})
       <main class="page">
-        
+        <section class="page__promo promo">
+          <div class="promo__container" >
+            <div class="promo__grandma-bg" data-prlx-mouse data-prlx-cx="200" data-prlx-cy="700"	>
+              <img src="@img/promo/grandma.png" alt="GrandMa">
+            </div>
+            <h1 class="promo__title">
+              Теплицы и парники из поликарбоната <span>цены от производителя</span>
+            </h1>
+            <h2 class="promo__subtitle">Купить усиленную теплицу от 599р.</h2>
+            <div class="promo__features features">
+              <ul class="features__list">
+                <li class="features__item">
+                  <span class="features__icon"><img src="@img/promo/check.png" alt="Check Icon"></span>
+                  <span class="features__text">Заводское изготовление</span>
+                </li>
+                <li class="features__item">
+                  <span class="features__icon"><img src="@img/promo/check.png" alt="Check Icon"></span>
+                  <span class="features__text">Срок службы более 20 лет</span>
+                </li>
+                <li class="features__item">
+                  <span class="features__icon"><img src="@img/promo/check.png" alt="Check Icon"></span>
+                  <span class="features__text">Доставка и монтаж в течени 2-3 дней</span>
+                </li>
+                <li class="features__item">
+                  <span class="features__icon"><img src="@img/promo/check.png" alt="Check Icon"></span>
+                  <span class="features__text">Оплата только при получении</span>
+                </li>
+                <li class="features__item">
+                  <span class="features__icon"><img src="@img/promo/check.png" alt="Check Icon"></span>
+                  <span class="features__text">Все теплицы в наличии на складе</span>
+                </li>
+              </ul>
+              <form class="features__form">
+                <label for="" class="features__field">
+                  <input type="tel" class="features__input">
+                  <span class="features__placeholder">Ваш номер:</span>
+                </label>
+                <button class="features__button" type="submit">Подобрать теплицу</button>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
       @@include('html/footer.html', {})
     </div>
     @@include('html/burgerMenu.html', {})
+    @@include('html/policy.html', {})
     <script src="js/app.min.js"></script>
   </body>
 </html> 

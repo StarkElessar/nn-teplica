@@ -1,3 +1,12 @@
+// FLS (Full Logging System)
+export function FLS(message) {
+	setTimeout(() => {
+		if (window.FLS) {
+			console.log(message);
+		}
+	}, 0);
+}
+
 export function isWebp() {
   // Проверка поддержки webp
   function testWebp(callback) {
@@ -16,6 +25,7 @@ export function isWebp() {
 
 export function burgerMenu() {
   const buttonBurger = document.querySelector('[data-burger]')
+  const buttonPolicy = document.querySelector('.footer__policy')
   const burgerMenu = document.querySelector('[data-menu]')
 
   document.addEventListener('click', (event) => {
@@ -25,9 +35,16 @@ export function burgerMenu() {
       buttonBurger.classList.toggle('_active')
       burgerMenu.classList.toggle('_active')
     }
+
+    if (target && target === buttonPolicy) {
+      document.querySelector('.policy').classList.add('_active')
+    }
+    
     if (target && target.classList.contains('_overlay')) {
+      document.querySelector('.policy').classList.remove('_active')
       buttonBurger.classList.remove('_active')
       burgerMenu.classList.remove('_active')
     }
+    
   })
 }
