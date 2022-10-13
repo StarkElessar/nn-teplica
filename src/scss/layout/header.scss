@@ -1,0 +1,137 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0 2px 15px rgba(#000, 5%);
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  // .header__burger
+  &__burger {
+    display: none;
+    background: $greenColor;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: $standartTrans;
+    &:hover {
+      background: darken($greenColor, 5%);
+    }
+    &._active {
+      z-index: 101;
+      span {
+        background: transparent;
+        &::after {
+          transform: rotate(-45deg);
+          top: 30%;
+        }
+        &::before {
+          transform: rotate(45deg);
+          top: 30%;
+        }
+      }
+    }
+    span {
+      position: relative;
+      height: 3px;
+      width: 24px;
+      border-radius: 2px;
+      background: #fff;
+      transition: $standartTrans;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        left: 0%;
+        transition: $standartTrans;
+      }
+      &::after {
+        top: 6px;
+      }
+      &::before {
+        bottom: 6px;
+      }
+    }
+    @include media(768) {
+      display: flex;
+      margin-right: auto;
+    }
+  }
+  // .header__logo
+  &__logo {
+    width: 160px;
+  }
+  // .header__description
+  &__description {
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 1px solid $greenColor;
+    display: flex;
+    flex-direction: column;
+    @include media(600) {
+      display: none;
+    }
+    // .header__description_text
+    &_text {
+      max-width: 262px;
+      line-height: 120%;
+      margin-bottom: 4px;
+      font-size: 14px;
+      color: #242424;
+      font-weight: 500;
+    }
+    // .header__description_title
+    &_title {
+      font-weight: 700;
+      color: $greenColor;
+    }
+  }
+  // .header__phone
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 17px 10px;
+    background: $greenColor;
+    border-radius: 10px;
+    transition: $standartTrans;
+    @include media(768) {
+      padding: 17px;
+    }
+    &:hover {
+      background: darken($greenColor, 5%);
+      box-shadow: $btnBoxShadow;
+    }
+    // .header__phone_icon
+    &_icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      @include media(768) {
+        margin-right: 0;
+      }
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    // .header__phone_tel
+    &_tel {
+      color: #fff;
+      @include media(768) {
+        display: none;
+      }
+    }
+  }
+}
