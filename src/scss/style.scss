@@ -1,12 +1,19 @@
+@use "sass:math";
+
+@import 'libs/swiper';
+
 @import 'config/fonts';
+@import 'config/functions';
 @import 'config/mixins';
 @import 'config/vars';
 @import 'config/reset';
 @import 'config/scrollbar';
-@import 'config/global';
+@import 'config/base';
+@import 'config/common';
 
 @import 'layout/header';
 @import 'layout/promo';
+@import 'layout/promotions';
 @import 'layout/footer';
 @import 'layout/burgerMenu';
 @import 'layout/policy';
