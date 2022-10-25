@@ -1,0 +1,24 @@
+.title {
+  font-size: rem(36);
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  span {
+    color: $greenColor;
+  }
+}
+.swiper {
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      width: rem(16);
+      height: rem(16);
+      background-color: transparent;
+      border: rem(2) solid $greenColor;
+      transition: $standartTrans;
+      opacity: 1;
+      &.swiper-pagination-bullet-active {
+        background-color: $greenColor;
+      }
+    }
+  }
+}
