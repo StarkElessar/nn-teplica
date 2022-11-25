@@ -1,0 +1,42 @@
+.catalog {
+  padding-top: rem(160);
+  padding-bottom: rem(60);
+  background-image: url("./../images/catalog/bg-catalog.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  box-shadow: inset 0 rem(4) rem(30) rgba(#000, 5%), inset 0 rem(4) rem(10) rgba(#000, 5%);
+  @include media(768) {
+    padding-top: rem(90);
+  }
+  @include media(425) {
+    padding-top: rem(40);
+  }
+  // .catalog__container
+  &__container {
+    position: relative;
+  }
+  // .catalog__title
+  &__title {
+    margin-bottom: rem(48);
+  }
+  // .catalog__vegetables-ibg
+  &__vegetables-ibg {
+    position: absolute;
+    top: rem(-240);
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: prc(207, 857);
+    @include media(768) {
+      top: rem(-150);
+    }
+    @include media(425) {
+      top: rem(-85);
+    }
+    @include media(375) {
+      top: rem(-75);
+    }
+  }
+}
