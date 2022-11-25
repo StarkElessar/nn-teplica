@@ -8,6 +8,7 @@ import Swiper, { Pagination } from 'swiper'
 const mousePrlx = new MousePRLX({})
 
 flsFunctions.isWebp()
+flsFunctions.headerFixed()
 flsFunctions.burgerMenu()
 flsFunctions.countDown(5, 'timer-podvyazka')
 flsFunctions.countDown(3, 'timer-domik')
