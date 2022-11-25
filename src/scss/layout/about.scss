@@ -1,0 +1,124 @@
+.about {
+  @include adaptiveClamp('padding-top', 120, 40);
+  @include adaptiveClamp('padding-bottom', 120, 40);
+  // .about__container
+  &__container {}
+  // .about__title
+  &__title {
+    margin-bottom: rem(50);
+  }
+  // .about__stats
+  &__stats {}
+  // .about__whyme-container
+  &__whyme-container {
+    margin-top: rem(50);
+  }
+}
+.stats-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(184), 1fr));
+  row-gap: rem(30);
+  // .stats-group__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: rem(18);
+    padding-left: rem(8);
+    padding-right: rem(8);
+    @include notLast {
+      border-right: rem(2) solid rgba(#000, 5%);
+    }
+    @include media(765) {
+      row-gap: rem(4);
+      @include notLast {
+        border: none;
+      }
+    }
+  }
+  // .stats-group__title
+  &__title {
+    color: $greenColor;
+    font-size: rem(48);
+    font-weight: 900;
+    text-align: center;
+  }
+  // .stats-group__description
+  &__description {
+    flex: 1 1;
+    font-size: rem(16);
+    text-align: center;
+  }
+  // .stats-group__image
+  &__image {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+// ===========================================================================
+.whyme {
+  // .whyme__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(rem(260), 1fr));
+    gap: rem(40);
+  }
+  // .whyme__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+  }
+  // .whyme__header
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: rem(12);
+  }
+  // .whyme__icon
+  &__icon {
+    flex: 0 0 rem(36);
+    height: rem(36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .whyme__label
+  &__label {
+    color: $greenColor;
+    text-transform: uppercase;
+    font-size: rem(20);
+    line-height: prc(23, 20);
+    font-weight: 900;
+  }
+  // .whyme__body
+  &__body {
+    flex: 1 1 auto;
+  }
+  // .whyme__article
+  &__article {
+    line-height: prc(21, 16);
+  }
+  // .whyme__article-list
+  &__article-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+    padding-left:  rem(18);
+  }
+  // .whyme__article-item
+  &__article-item {
+    list-style-type: disc;
+    &::marker {
+      color: $greenColor;
+    }
+  }
+}
