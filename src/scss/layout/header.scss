@@ -7,6 +7,13 @@
   box-shadow: 0 2px 15px rgba(#000, 5%);
   background: rgba(#fff, 80%);
   z-index: 100;
+  transition: $standartTrans;
+  &._sticky {
+    position: fixed;
+    left: 0;
+    backdrop-filter: blur(rem(6));
+    animation: showHeader forwards 1000ms ease-in-out;
+  }
   // .header__container
   &__container {
     display: flex;
