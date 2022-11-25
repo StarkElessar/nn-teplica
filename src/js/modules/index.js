@@ -24,6 +24,20 @@ export function isWebp() {
   })
 }
 
+// Функция для фиксированной шапки при скролле =================================================================================================================
+export function headerFixed() {
+  const header = document.querySelector('.header')
+  const firstScreen = document.querySelector('[data-observ]')
+
+  const headerStickyObserver = new IntersectionObserver(([entry]) => {
+    header.classList.toggle('_sticky', !entry.isIntersecting)
+  })
+
+  if (firstScreen) {
+    headerStickyObserver.observe(firstScreen)
+  }
+}
+
 export function burgerMenu() {
   const buttonBurger = document.querySelector('[data-burger]')
   const buttonPolicy = document.querySelector('.footer__policy')
