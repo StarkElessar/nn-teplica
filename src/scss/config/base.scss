@@ -6,9 +6,17 @@
 }
 .page {
   flex: 1 1 auto;
-
   &__start {
     padding-top: $headerHeight;
+  }
+  [data-observ] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(2);
+    background: transparent;
+    pointer-events: none;
   }
 }
 [class*="__container"] {
