@@ -2,7 +2,7 @@ import * as flsFunctions from './modules'
 import { MousePRLX } from './libs/parallaxMouse'
 
 /* Раскомментировать для использования */
-import Swiper, { Pagination } from 'swiper'
+import Swiper, { Autoplay, Pagination } from 'swiper'
 
 // Запускаем и добавляем в объект модулей
 const mousePrlx = new MousePRLX({})
@@ -18,10 +18,10 @@ flsFunctions.countDown(30, 'timer-zacepy')
 flsFunctions.countDown(50, 'timer-dostavka')
 
 new Swiper('.promotions__slider', {
-  modules: [ Pagination ],
+  modules: [ Pagination, Autoplay ],
   direction: 'horizontal',
   autoplay: {
-    delay: 1000,
+    delay: 3000,
   },
   speed: 800,
   loop: true,
