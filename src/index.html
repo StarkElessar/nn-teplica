@@ -8,6 +8,7 @@
   <div class="wrapper">
     @@include('html/header.html', {})
     <main class="page">
+      <div data-observ></div>
       <section class="page__promo promo">
         <div class="promo__container">
           <div class="promo__grandma-bg" data-prlx-mouse data-prlx-cx="200" data-prlx-cy="700">
@@ -29,7 +30,7 @@
                 <span class="features__icon" data-prlx-mouse data-prlx-dyr>
                   <img src="@img/promo/check.png" alt="Check Icon">
                 </span>
-                <span class="features__text">Срок службы более 20 лет</span>
+                <span class="features__text">Срок службы более 10 лет</span>
               </li>
               <li class="features__item">
                 <span class="features__icon" data-prlx-mouse data-prlx-dxr>
@@ -212,6 +213,145 @@
             </div>
           </div>
           <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="page__about about">
+        <div class="about__container">
+          <h2 class="about__title title">О компании <span>магазин теплиц №1</span></h2>
+          <div class="about__stats stats-group">
+            <div class="stats-group__item">
+              <h3 class="stats-group__title">9 лет</h3>
+              <div class="stats-group__description">на рынке производства теплиц</div>
+              <div class="stats-group__image">
+                <img src="@img/about/eggplant.png" alt="Eggplant">
+              </div>
+            </div>
+            <div class="stats-group__item">
+              <h3 class="stats-group__title">3970</h3>
+              <div class="stats-group__description">теплиц установлено за время работы</div>
+              <div class="stats-group__image">
+                <img src="@img/about/tomato.png" alt="Tomato">
+              </div>
+            </div>
+            <div class="stats-group__item">
+              <h3 class="stats-group__title">37%</h3>
+              <div class="stats-group__description">клиентов приходят к нам по рекомендации</div>
+              <div class="stats-group__image">
+                <img src="@img/about/cucumber.png" alt="Cucumber">
+              </div>
+            </div>
+            <div class="stats-group__item">
+              <h3 class="stats-group__title">10 лет</h3>
+              <div class="stats-group__description">срок службы наших теплиц</div>
+              <div class="stats-group__image">
+                <img src="@img/about/beet.png" alt="Beet">
+              </div>
+            </div>
+          </div>
+          <div class="about__whyme-container whyme">
+            <ul class="whyme__list">
+              <li class="whyme__item">
+                <div class="whyme__header">
+                  <div class="whyme__icon">
+                    <img src="@img/about/car.png" alt="Доставка и монтаж">
+                  </div>
+                  <h5 class="whyme__label">Доставка и монтаж</h5>
+                </div>
+                <div class="whyme__body">
+                  <p class="whyme__article">
+                    Оперативная доставка со склада в день заказа на расстояния до 100км от Нижнего Новгорода. Оплата при получении.
+                  </p>
+                </div>
+              </li>
+              <li class="whyme__item">
+                <div class="whyme__header">
+                  <div class="whyme__icon">
+                    <img src="@img/about/location.png" alt="Цена теплиц">
+                  </div>
+                  <h5 class="whyme__label">Цена теплиц</h5>
+                </div>
+                <div class="whyme__body">
+                  <p class="whyme__article">
+                    Покупайте на прямую от завода теплиц. Собственное производство теплиц позволяет сохранять невысокую цену.
+                  </p>
+                </div>
+              </li>
+              <li class="whyme__item">
+                <div class="whyme__header">
+                  <div class="whyme__icon">
+                    <img src="@img/about/door.png" alt="Широкий выбор">
+                  </div>
+                  <h5 class="whyme__label">Широкий выбор</h5>
+                </div>
+                <div class="whyme__body">
+                  <p class="whyme__article">
+                    В наличии теплицы от эконом до премиум, включая стандартные, усиленные и теплицы с прямой стенкой.
+                  </p>
+                </div>
+              </li>
+              <li class="whyme__item">
+                <div class="whyme__header">
+                  <div class="whyme__icon">
+                    <img src="@img/about/like.png" alt="100% качество">
+                  </div>
+                  <h5 class="whyme__label">100% качество</h5>
+                </div>
+                <div class="whyme__body">
+                  <ul class="whyme__article-list">
+                    <li class="whyme__article-item">
+                      Заводское изготовление теплиц
+                    </li>
+                    <li class="whyme__article-item">
+                      Поликарбонат с защитой от УФ-лучей
+                    </li>
+                    <li class="whyme__article-item">
+                      Каркас - профильная труба до 40мм
+                    </li>
+                    <li class="whyme__article-item">
+                      Металл с защитой от коррозии
+                    </li>
+                    <li class="whyme__article-item">
+                      Усиленный каркас за счёт соединения в одной плоскости
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="whyme__item">
+                <div class="whyme__header">
+                  <div class="whyme__icon">
+                    <img src="@img/about/shield.png" alt="Гарантия">
+                  </div>
+                  <h5 class="whyme__label">Гарантия эксплуатации</h5>
+                </div>
+                <div class="whyme__body">
+                  <ul class="whyme__article-list">
+                    <li class="whyme__article-item">
+                      До 15 лет на поликарбонат
+                    </li>
+                    <li class="whyme__article-item">
+                      Гарантия на каркас 1 год
+                    </li>
+                    <li class="whyme__article-item">
+                      Средний срок эксплуатации 10 - 20 лет
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="whyme__item">
+                <div class="whyme__header">
+                  <div class="whyme__icon">
+                    <img src="@img/about/lock.png" alt="Комплектация под ключ">
+                  </div>
+                  <h5 class="whyme__label">Комплектация под ключ</h5>
+                </div>
+                <div class="whyme__body">
+                  <p class="whyme__article">
+                    Теплицы полностью укомплектованы фурнитурой и креплением для сборки.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
