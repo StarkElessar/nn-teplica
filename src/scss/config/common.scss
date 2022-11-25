@@ -1,5 +1,14 @@
+.page {
+  // .page__promo
+  &__promo {}
+  // .page__promotions
+  &__promotions {}
+  // .page__about
+  &__about {}
+}
 .title {
   font-size: rem(36);
+  @include adaptiveClamp('font-size', 36, 24, 768, 320, 1);
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
