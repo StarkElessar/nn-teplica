@@ -5,6 +5,7 @@
 @import 'config/fonts';
 @import 'config/functions';
 @import 'config/mixins';
+@import 'config/patternSelectors';
 @import 'config/vars';
 @import 'config/reset';
 @import 'config/keyframes';
@@ -12,11 +13,15 @@
 @import 'config/base';
 @import 'config/common';
 
+@import 'layout/customDropdown';
+
 @import 'layout/header';
 @import 'layout/promo';
 @import 'layout/promotions';
 @import 'layout/about';
 @import 'layout/catalog';
+@import 'layout/individualSelection';
+@import 'layout/formSelection';
 @import 'layout/footer';
 @import 'layout/burgerMenu';
 @import 'layout/policy';
