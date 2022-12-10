@@ -1,0 +1,117 @@
+.form-selection {
+  display: grid;
+  grid-template: repeat(5, auto) / repeat(3, 1fr);
+  column-gap: rem(21);
+  row-gap: rem(48);
+  background-color: #fff;
+  padding: rem(36) 1.5%;
+  border-radius: rem(10);
+  @include media(767) {
+    grid-template: repeat(6, auto) / repeat(2, 1fr);
+  }
+  // .form-selection__form-field
+  &__form-field {
+    position: relative;
+    // .form-selection__form-field_column
+    &_column {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(20);
+    }
+    // .form-selection__form-field_name
+    &_name {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+      @include media(767) {
+        grid-row: 5 / 6;
+      }
+    }
+    // .form-selection__form-field_phone
+    &_phone {
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+      @include media(767) {
+        grid-row: 5 / 6;
+      }
+    }
+    // .form-selection__form-field_button
+    &_button {
+      grid-column: 1 / 2;
+      grid-row: 5 / 6;
+      @include media(767) {
+        grid-row: 6;
+      }
+    }
+  }
+  // .form-selection__label
+  &__label {
+    display: inline-block;
+    margin-bottom: rem(20);
+    @extend %text-label;
+  }
+  // .form-selection__dropdown
+  &__dropdown {
+  }
+  // .form-selection__check-label
+  &__check-label {
+    display: flex;
+    align-items: center;
+    column-gap: rem(16);
+    cursor: pointer;
+    input {
+      display: none;
+      &:checked + .form-selection__custom-checkbox {
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  // .form-selection__custom-checkbox
+  &__custom-checkbox {
+    width: rem(36);
+    height: rem(36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: rem(6);
+    img {
+      opacity: 0;
+      transition: $standartTrans;
+    }
+  }
+  // .form-selection__text-check-label
+  &__text-check-label {
+    @extend %text-label;
+  }
+  // .form-selection__input-label
+  &__input-label {
+    @extend %text-label;
+  }
+  // .form-selection__input-control
+  &__input-control {
+    background-color: #f4f4f4;
+    border-radius: rem(6);
+    height: rem(44);
+    padding: 0 rem(12);
+    @include hidePlaceholder;
+  }
+  // .form-selection__button-submit
+  &__button-submit {
+    padding: rem(21) rem(12);
+    width: 100%;
+    border-radius: rem(6);
+    background-color: $greenColor;
+    color: #fff;
+    font-size: rem(18);
+    text-align: center;
+    transition: $standartTrans;
+    &:hover {
+      background-color: darken($greenColor, 3%);
+    }
+    &:active {
+      background-color: darken($greenColor, 10%);
+    }
+  }
+}
