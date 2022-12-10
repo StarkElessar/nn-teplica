@@ -1,4 +1,5 @@
 import * as flsFunctions from './modules'
+import dropdownGroup from './modules/dropdownGroup'
 import { MousePRLX } from './libs/parallaxMouse'
 
 /* Раскомментировать для использования */
@@ -16,6 +17,8 @@ flsFunctions.countDown(15, 'timer-hranenie')
 flsFunctions.countDown(1, 'timer-pensiya')
 flsFunctions.countDown(30, 'timer-zacepy')
 flsFunctions.countDown(50, 'timer-dostavka')
+
+dropdownGroup()
 
 new Swiper('.promotions__slider', {
   modules: [ Pagination, Autoplay ],
