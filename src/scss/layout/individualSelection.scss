@@ -1,0 +1,58 @@
+.individual-selection {
+  padding-top: rem(40);
+  padding-bottom: rem(60);
+  background-image: url('@img/selection/bg-grass.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  // .individual-selection__container
+  &__container {
+    position: relative;
+  }
+  // .individual-selection__title
+  &__title {
+    color: #fff;
+    margin-bottom: rem(16);
+  }
+  // .individual-selection__desc
+  &__desc {
+    text-align: center;
+    color: #fff;
+    font-size: rem(18);
+    font-weight: 500;
+    margin-bottom: rem(85);
+  }
+  // .individual-selection__form-wrap
+  &__form-wrap {
+    position: relative;
+    &::before {
+      content: '';
+      width: 100%;
+      height: rem(110);
+      position: absolute;
+      top: rem(16);
+      left: 50%;
+      transform: translate(-50%, -100%);
+      background-image: url('@img/selection/herb.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: 0;
+    }
+  }
+  // .individual-selection__form-selection
+  &__form-selection {
+    position: relative;
+  }
+  // .individual-selection__decore-image
+  &__decore-image {
+    position: absolute;
+    bottom: rem(-60);
+    right: 0;
+    pointer-events: none;
+    z-index: 10;
+    @include media(767) {
+      height: rem(240);
+    }
+  }
+}
