@@ -4,6 +4,10 @@ body {
     touch-action: none;
   }
 }
+
+// Базовые анимации:
+@import "keyframes";
+
 .wrapper {
   display: flex;
   flex-direction: column;
