@@ -5,6 +5,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  @include media(500) {
+    padding-bottom: 0;
+  }
   // .individual-selection__container
   &__container {
     position: relative;
@@ -53,6 +56,9 @@
     z-index: 10;
     @include media(767) {
       height: rem(240);
+    }
+    @include media(500) {
+      right: rem(-60);
     }
   }
 }
