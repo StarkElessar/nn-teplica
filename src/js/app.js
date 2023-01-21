@@ -1,6 +1,8 @@
 import * as module from './modules'
 import dropdownGroup from './modules/dropdownGroup'
+import onBlurInput from './modules/onBlurInput'
 import { MousePRLX } from './libs/parallaxMouse'
+import './modules/yandexMapLoad'
 
 /* Раскомментировать для использования */
 import Swiper, { Autoplay, Pagination } from 'swiper'
@@ -19,9 +21,10 @@ module.countDown(30, 'timer-zacepy')
 module.countDown(50, 'timer-dostavka')
 
 dropdownGroup()
+onBlurInput()
 
-new Swiper('.promotions__slider', {
-  modules: [ Pagination, Autoplay ],
+const promotionsSlider = new Swiper('.promotions__slider', {
+  modules: [Pagination, Autoplay],
   direction: 'horizontal',
   autoplay: {
     delay: 3000,
@@ -35,4 +38,8 @@ new Swiper('.promotions__slider', {
   pagination: {
     el: '.swiper-pagination',
   },
-});
+})
+
+window.onresize = () => {
+  location.hostname !== 'localhost' ? location.reload() : null
+}
