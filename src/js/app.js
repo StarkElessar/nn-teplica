@@ -1,4 +1,4 @@
-import * as flsFunctions from './modules'
+import * as module from './modules'
 import dropdownGroup from './modules/dropdownGroup'
 import { MousePRLX } from './libs/parallaxMouse'
 
@@ -8,15 +8,15 @@ import Swiper, { Autoplay, Pagination } from 'swiper'
 // Запускаем и добавляем в объект модулей
 const mousePrlx = new MousePRLX({})
 
-flsFunctions.isWebp()
-flsFunctions.headerFixed()
-flsFunctions.burgerMenu()
-flsFunctions.countDown(5, 'timer-podvyazka')
-flsFunctions.countDown(3, 'timer-domik')
-flsFunctions.countDown(15, 'timer-hranenie')
-flsFunctions.countDown(1, 'timer-pensiya')
-flsFunctions.countDown(30, 'timer-zacepy')
-flsFunctions.countDown(50, 'timer-dostavka')
+module.isWebp()
+module.headerFixed()
+module.setToggleWindowPopup()
+module.countDown(5, 'timer-podvyazka')
+module.countDown(3, 'timer-domik')
+module.countDown(15, 'timer-hranenie')
+module.countDown(1, 'timer-pensiya')
+module.countDown(30, 'timer-zacepy')
+module.countDown(50, 'timer-dostavka')
 
 dropdownGroup()
 
@@ -28,6 +28,7 @@ new Swiper('.promotions__slider', {
   },
   speed: 800,
   loop: true,
+  grabCursor: true,
   slidesPerView: 'auto',
   spaceBetween: 65,
   centeredSlides: true,
