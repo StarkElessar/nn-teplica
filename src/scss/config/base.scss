@@ -35,6 +35,8 @@ body {
   padding: 0 $mainOffset;
 }
 [class*="-ibg"] {
+  position: relative;
+  overflow: hidden;
   img {
     position: absolute;
     top: 0;
