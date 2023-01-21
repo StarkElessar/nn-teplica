@@ -125,54 +125,14 @@
   }
   // .features__field
   &__field {
-    position: relative;
-    margin-bottom: 8px;
+    margin-bottom: rem(8);
   }
   // .features__input
-  &__input {
-    width: 100%;
-    height: 45px;
-    padding-left: 15px;
-    background: transparent;
-    border: none;
-    border-radius: 10px;
-    border: 1px solid rgba(#000, 20%);
-    transition: $standartTrans;
-    &:focus {
-      border-color: $greenColor;
-    }
-    &:focus + .features__placeholder {
-      transform: translateY(-22px);
-      background: #fff;
-      color: $greenColor;
-    }
-  }
+  &__input { }
   // .features__placeholder
-  &__placeholder {
-    position: absolute;
-    pointer-events: none;
-    color: #525252;
-    top: 14px;
-    padding: 0 4px;
-    left: 15px;
-    transition: $standartTrans;
-  }
+  &__placeholder { }
   // .features__button
   &__button {
-    padding: 23px 0;
-    width: 100%;
     margin-top: 4px;
-    background-color: $greenColor;
-    font-size: 18px;
-    color: #fff;
-    text-align: center;
-    border: none;
-    border-radius: 10px;
-    display: inline-block;
-    cursor: pointer;
-    transition: $standartTrans;
-    &:hover {
-      background: darken($greenColor, 5%);
-    }
   }
 }
