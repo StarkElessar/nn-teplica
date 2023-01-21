@@ -12,11 +12,9 @@
   }
   // .promotions__slider
   &__slider {
-    width: 100%;
   }
   // .promotions__wrapper
   &__wrapper {
-    width: 100%;
     padding-bottom: rem(50);
   }
   // .promotions__slide
@@ -36,6 +34,7 @@
   flex-direction: column;
   position: relative;
   width: rem(780);
+  margin: 0 auto;
   overflow: hidden;
   border-radius: rem(16);
   box-shadow: 0 rem(4) rem(8) rgba(#000, 20%);
