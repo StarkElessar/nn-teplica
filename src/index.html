@@ -52,11 +52,11 @@
               </li>
             </ul>
             <form class="features__form">
-              <label for="" class="features__field">
-                <input type="tel" class="features__input">
-                <span class="features__placeholder">Ваш номер:</span>
+              <label class="features__field form-field">
+                <input type="tel" class="features__input input-form _req" name="userPhone">
+                <span class="features__placeholder input-placeholder">Ваш номер:</span>
               </label>
-              <button class="features__button" type="submit">Подобрать теплицу</button>
+              <button class="features__button button-form" type="submit">Подобрать теплицу</button>
             </form>
           </div>
         </div>
@@ -540,6 +540,61 @@
               data-prlx-cx="200" 
               data-prlx-cy="700"
           >
+        </div>
+      </section>
+      <section class="page__feedback feedback">
+        <div class="feedback__container">
+          <h2 class="feedback__title title">Магазин склад <span>в Минске</span></h2>
+          <p class="feedback__desc">Теплицы от производителя. Сезонная распродажа теплиц.</p>
+          <div class="feedback__content">
+            <div class="feedback__form-column">
+              <div class="feedback__address">
+                <div class="feedback__address-row">
+                  <span class="feedback__address-icon">
+                    <img src="@img/icons/location-icon.png" alt="Location">
+                  </span>
+                  <span class="feedback__address-text">г. Минск, ул. Гамарника, д. 30, офис. 405</span>
+                </div>
+                <div class="feedback__address-row">
+                  <span class="feedback__address-icon">
+                    <img src="@img/icons/phone-icon.png" alt="Phone">
+                  </span>
+                  <a class="feedback__address-text feedback__address-text_link" href="tel:+375291230000">
+                    +375 (29) 123-00-00
+                  </a>
+                </div>
+              </div>
+              <form class="feedback__form">
+                <p class="feedback__form-title">Закажите консультацию менеджера на индивидуальный подбор теплицы</p>
+                <p class="feedback__form-subtitle">Перезвоним в течение 1 минуты</p>
+                <label class="feedback__form-field form-field">
+                  <input type="text" name="userName" class="input-form">
+                  <span class="feedback__form-placeholder input-placeholder">Ваше имя</span>
+                </label>
+                <label class="feedback__form-field form-field">
+                  <input type="tel" name="userPhone" class="input-form _req">
+                  <span class="feedback__form-placeholder input-placeholder">Ваше телефон*</span>
+                  <span class="input-text-req">Номер телефона не может быть пустым!</span>
+                </label>
+                <button class="feedback__form-button button-form" type="submit">Забронировать</button>
+              </form>
+            </div>
+            <div class="feedback__map-column">
+              <div class="map-container">
+                <div class="map-loader"></div>
+                <div id="map-yandex"></div>
+              </div>
+            </div>
+          </div>
+          <img 
+              src="@img/feedback/vegetables.png" 
+              alt="" 
+              class="feedback__decor-image"
+              data-prlx-mouse 
+              data-prlx-cx="200"
+              data-prlx-cy="700"
+          >
+          <img src="@img/feedback/bg-grass.png" alt="" class="feedback__back-image">
         </div>
       </section>
     </main>
