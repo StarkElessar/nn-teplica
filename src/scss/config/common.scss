@@ -1,23 +1,79 @@
 .page {
   // .page__promo
-  &__promo {}
+  &__promo {
+  }
   // .page__promotions
-  &__promotions {}
+  &__promotions {
+  }
   // .page__about
-  &__about {}
+  &__about {
+  }
   // .page__catalog
-  &__catalog {}
+  &__catalog {
+  }
   // .page__individual-selection
-  &__individual-selection {}
+  &__individual-selection {
+  }
+  // .page__feedback
+  &__feedback {}
 }
 .title {
   font-size: rem(36);
-  @include adaptiveClamp('font-size', 36, 24, 768, 320, 1);
+  @include adaptiveClamp("font-size", 36, 24, 768, 320, 1);
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
   span {
     color: $greenColor;
+  }
+}
+.form-field {
+  position: relative;
+}
+.input-form {
+  width: 100%;
+  height: rem(45);
+  padding-left: rem(15);
+  background: transparent;
+  border-radius: $mainRadius;
+  border: rem(1) solid rgba(#000, 20%);
+  transition: $standartTrans;
+  &:focus {
+    border-color: $greenColor;
+  }
+  &:focus + .input-placeholder {
+    transform: translateY(rem(-22));
+    background: #fff;
+    color: $greenColor;
+  }
+}
+.input-placeholder {
+  position: absolute;
+  pointer-events: none;
+  color: #525252;
+  top: rem(14);
+  padding: 0 rem(4);
+  left: rem(15);
+  transition: $standartTrans;
+}
+.input-text-req {
+  color: #e90000;
+  font-size: rem(14);
+  display: inline-block;
+  margin-left: rem(15);
+  margin-top: rem(8);
+  display: none;
+}
+.button-form {
+  padding: rem(23) 0;
+  width: 100%;
+  background-color: $greenColor;
+  font-size: rem(18);
+  color: #fff;
+  border-radius: $mainRadius;
+  transition: $standartTrans;
+  &:hover {
+    background: darken($greenColor, 5%);
   }
 }
 .swiper {
