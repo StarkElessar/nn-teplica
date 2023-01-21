@@ -8,12 +8,12 @@
 @import 'config/patternSelectors';
 @import 'config/vars';
 @import 'config/reset';
-@import 'config/keyframes';
 @import 'config/scrollbar';
 @import 'config/base';
 @import 'config/common';
 
 @import 'layout/customDropdown';
+@import 'layout/map';
 
 @import 'layout/header';
 @import 'layout/promo';
@@ -22,6 +22,7 @@
 @import 'layout/catalog';
 @import 'layout/individualSelection';
 @import 'layout/formSelection';
+@import 'layout/feedback';
 @import 'layout/footer';
 @import 'layout/burgerMenu';
 @import 'layout/policy';
