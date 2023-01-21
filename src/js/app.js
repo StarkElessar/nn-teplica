@@ -40,6 +40,23 @@ const promotionsSlider = new Swiper('.promotions__slider', {
   },
 })
 
+new Swiper('.reviews__slider', {
+  modules: [Pagination, Autoplay],
+  direction: 'horizontal',
+  autoplay: {
+    delay: 3000,
+  },
+  speed: 800,
+  loop: false,
+  grabCursor: true,
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar',
+  },
+})
+
 window.onresize = () => {
   location.hostname !== 'localhost' ? location.reload() : null
 }
