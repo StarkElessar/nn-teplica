@@ -23,16 +23,18 @@ module.countDown(50, 'timer-dostavka')
 dropdownGroup()
 onBlurInput()
 
-const promotionsSlider = new Swiper('.promotions__slider', {
+const defaultSliderConfig = {
   modules: [Pagination, Autoplay],
   direction: 'horizontal',
-  autoplay: {
-    delay: 3000,
-  },
+  autoplay: { delay: 3000 },
   speed: 800,
-  loop: true,
   grabCursor: true,
   slidesPerView: 'auto',
+}
+
+new Swiper('.promotions__slider', {
+  ...defaultSliderConfig,
+  loop: true,
   spaceBetween: 65,
   centeredSlides: true,
   pagination: {
@@ -41,22 +43,11 @@ const promotionsSlider = new Swiper('.promotions__slider', {
 })
 
 new Swiper('.reviews__slider', {
-  modules: [Pagination, Autoplay],
-  direction: 'horizontal',
-  autoplay: {
-    delay: 3000,
-  },
-  speed: 800,
+  ...defaultSliderConfig,
   loop: false,
-  grabCursor: true,
-  slidesPerView: 'auto',
   spaceBetween: 20,
   pagination: {
     el: '.swiper-pagination',
     type: 'progressbar',
   },
 })
-
-window.onresize = () => {
-  location.hostname !== 'localhost' ? location.reload() : null
-}
