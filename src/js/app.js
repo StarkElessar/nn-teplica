@@ -1,14 +1,16 @@
 import * as module from './modules'
 import dropdownGroup from './modules/dropdownGroup'
+import onFocusInput from './modules/onFocusInput'
 import onBlurInput from './modules/onBlurInput'
+import includeSliders from './modules/includeSliders'
+import animationGSAPOnPage from './modules/animations'
 import { MousePRLX } from './libs/parallaxMouse'
 import './modules/yandexMapLoad'
 
-/* Раскомментировать для использования */
-import Swiper, { Autoplay, Pagination } from 'swiper'
-
 // Запускаем и добавляем в объект модулей
-const mousePrlx = new MousePRLX({})
+new MousePRLX({})
+
+animationGSAPOnPage()
 
 module.isWebp()
 module.headerFixed()
@@ -21,33 +23,6 @@ module.countDown(30, 'timer-zacepy')
 module.countDown(50, 'timer-dostavka')
 
 dropdownGroup()
+onFocusInput()
 onBlurInput()
-
-const defaultSliderConfig = {
-  modules: [Pagination, Autoplay],
-  direction: 'horizontal',
-  autoplay: { delay: 3000 },
-  speed: 800,
-  grabCursor: true,
-  slidesPerView: 'auto',
-}
-
-new Swiper('.promotions__slider', {
-  ...defaultSliderConfig,
-  loop: true,
-  spaceBetween: 65,
-  centeredSlides: true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
-})
-
-new Swiper('.reviews__slider', {
-  ...defaultSliderConfig,
-  loop: false,
-  spaceBetween: 20,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'progressbar',
-  },
-})
+includeSliders()
