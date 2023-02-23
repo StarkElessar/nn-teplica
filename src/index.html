@@ -4,8 +4,9 @@
 'title': 'Теплицы и парники из поликарбоната'
 })
 
-<body>
+<body class="lock">
   <div class="wrapper">
+    @@include('html/loader.html', {})
     @@include('html/header.html', {})
     <main class="page">
       <div data-observ></div>
@@ -51,7 +52,7 @@
                 <span class="features__text">Все теплицы в наличии на складе</span>
               </li>
             </ul>
-            <form class="features__form">
+            <form class="features__form" autocomplete="off">
               <label class="features__field form-field">
                 <input type="tel" class="features__input input-form _req" name="userPhone">
                 <span class="features__placeholder input-placeholder">Ваш номер:</span>
@@ -64,155 +65,155 @@
       <section class="page__promotions promotions">
         <div class="promotions__container">
           <h2 class="promotions__title title"><span>Актуальные</span> акции</h2>
-        </div>
-        <div class="promotions__slider swiper">
-          <div class="promotions__wrapper swiper-wrapper">
-            <div class="promotions__slide swiper-slide">
-              <div class="item-promotion">
-                <div class="item-promotion__image">
-                  <img src="@img/promotions/01.jpg" alt="Promotions Image">
+          <div class="promotions__slider swiper">
+            <div class="promotions__wrapper swiper-wrapper">
+              <div class="promotions__slide swiper-slide">
+                <div class="item-promotion">
+                  <div class="item-promotion__image">
+                    <img src="@img/promotions/01.jpg" alt="Promotions Image">
+                  </div>
+                  <div class="item-promotion__footer">
+                    <div class="item-promotion__icon">
+                      <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
+                    </div>
+                    <div class="item-promotion__text">
+                      <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
+                      <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
+                    </div>
+                    <div class="item-promotion__timer timer" id="timer-podvyazka">
+                      <div class="timer__group timer__group_hours">00</div>
+                      <div class="timer__group timer__group_minutes">36</div>
+                      <div class="timer__group timer__group_seconds">48</div>
+                    </div>
+                    <button type="button" class="item-promotion__button" data-open-modal>
+                      Заказать по акции
+                    </button>
+                  </div>
                 </div>
-                <div class="item-promotion__footer">
-                  <div class="item-promotion__icon">
-                    <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
+              </div>
+              <div class="promotions__slide swiper-slide">
+                <div class="item-promotion">
+                  <div class="item-promotion__image">
+                    <img src="@img/promotions/02.jpg" alt="Promotions Image">
                   </div>
-                  <div class="item-promotion__text">
-                    <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
-                    <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
+                  <div class="item-promotion__footer">
+                    <div class="item-promotion__icon">
+                      <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
+                    </div>
+                    <div class="item-promotion__text">
+                      <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
+                      <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
+                    </div>
+                    <div class="item-promotion__timer timer" id="timer-domik">
+                      <div class="timer__group timer__group_hours">00</div>
+                      <div class="timer__group timer__group_minutes">36</div>
+                      <div class="timer__group timer__group_seconds">48</div>
+                    </div>
+                    <button type="button" class="item-promotion__button" data-open-modal>
+                      Заказать по акции
+                    </button>
                   </div>
-                  <div class="item-promotion__timer timer" id="timer-podvyazka">
-                    <div class="timer__group timer__group_hours">00</div>
-                    <div class="timer__group timer__group_minutes">36</div>
-                    <div class="timer__group timer__group_seconds">48</div>
+                </div>
+              </div>
+              <div class="promotions__slide swiper-slide">
+                <div class="item-promotion">
+                  <div class="item-promotion__image">
+                    <img src="@img/promotions/03.jpg" alt="Promotions Image">
                   </div>
-                  <button type="button" class="item-promotion__button" data-open-modal>
-                    Заказать по акции
-                  </button>
+                  <div class="item-promotion__footer">
+                    <div class="item-promotion__icon">
+                      <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
+                    </div>
+                    <div class="item-promotion__text">
+                      <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
+                      <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
+                    </div>
+                    <div class="item-promotion__timer timer" id="timer-hranenie">
+                      <div class="timer__group timer__group_hours">00</div>
+                      <div class="timer__group timer__group_minutes">36</div>
+                      <div class="timer__group timer__group_seconds">48</div>
+                    </div>
+                    <button type="button" class="item-promotion__button" data-open-modal>
+                      Заказать по акции
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="promotions__slide swiper-slide">
+                <div class="item-promotion">
+                  <div class="item-promotion__image">
+                    <img src="@img/promotions/04.jpg" alt="Promotions Image">
+                  </div>
+                  <div class="item-promotion__footer">
+                    <div class="item-promotion__icon">
+                      <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
+                    </div>
+                    <div class="item-promotion__text">
+                      <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
+                      <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
+                    </div>
+                    <div class="item-promotion__timer timer" id="timer-pensiya">
+                      <div class="timer__group timer__group_hours">00</div>
+                      <div class="timer__group timer__group_minutes">36</div>
+                      <div class="timer__group timer__group_seconds">48</div>
+                    </div>
+                    <button type="button" class="item-promotion__button" data-open-modal>
+                      Заказать по акции
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="promotions__slide swiper-slide">
+                <div class="item-promotion">
+                  <div class="item-promotion__image">
+                    <img src="@img/promotions/05.jpg" alt="Promotions Image">
+                  </div>
+                  <div class="item-promotion__footer">
+                    <div class="item-promotion__icon">
+                      <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
+                    </div>
+                    <div class="item-promotion__text">
+                      <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
+                      <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
+                    </div>
+                    <div class="item-promotion__timer timer" id="timer-zacepy">
+                      <div class="timer__group timer__group_hours">00</div>
+                      <div class="timer__group timer__group_minutes">36</div>
+                      <div class="timer__group timer__group_seconds">48</div>
+                    </div>
+                    <button type="button" class="item-promotion__button" data-open-modal>
+                      Заказать по акции
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="promotions__slide swiper-slide">
+                <div class="item-promotion">
+                  <div class="item-promotion__image">
+                    <img src="@img/promotions/06.jpg" alt="Promotions Image">
+                  </div>
+                  <div class="item-promotion__footer">
+                    <div class="item-promotion__icon">
+                      <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
+                    </div>
+                    <div class="item-promotion__text">
+                      <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
+                      <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
+                    </div>
+                    <div class="item-promotion__timer timer" id="timer-dostavka">
+                      <div class="timer__group timer__group_hours">00</div>
+                      <div class="timer__group timer__group_minutes">36</div>
+                      <div class="timer__group timer__group_seconds">48</div>
+                    </div>
+                    <button type="button" class="item-promotion__button" data-open-modal>
+                      Заказать по акции
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="promotions__slide swiper-slide">
-              <div class="item-promotion">
-                <div class="item-promotion__image">
-                  <img src="@img/promotions/02.jpg" alt="Promotions Image">
-                </div>
-                <div class="item-promotion__footer">
-                  <div class="item-promotion__icon">
-                    <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
-                  </div>
-                  <div class="item-promotion__text">
-                    <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
-                    <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
-                  </div>
-                  <div class="item-promotion__timer timer" id="timer-domik">
-                    <div class="timer__group timer__group_hours">00</div>
-                    <div class="timer__group timer__group_minutes">36</div>
-                    <div class="timer__group timer__group_seconds">48</div>
-                  </div>
-                  <button type="button" class="item-promotion__button" data-open-modal>
-                    Заказать по акции
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="promotions__slide swiper-slide">
-              <div class="item-promotion">
-                <div class="item-promotion__image">
-                  <img src="@img/promotions/03.jpg" alt="Promotions Image">
-                </div>
-                <div class="item-promotion__footer">
-                  <div class="item-promotion__icon">
-                    <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
-                  </div>
-                  <div class="item-promotion__text">
-                    <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
-                    <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
-                  </div>
-                  <div class="item-promotion__timer timer" id="timer-hranenie">
-                    <div class="timer__group timer__group_hours">00</div>
-                    <div class="timer__group timer__group_minutes">36</div>
-                    <div class="timer__group timer__group_seconds">48</div>
-                  </div>
-                  <button type="button" class="item-promotion__button" data-open-modal>
-                    Заказать по акции
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="promotions__slide swiper-slide">
-              <div class="item-promotion">
-                <div class="item-promotion__image">
-                  <img src="@img/promotions/04.jpg" alt="Promotions Image">
-                </div>
-                <div class="item-promotion__footer">
-                  <div class="item-promotion__icon">
-                    <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
-                  </div>
-                  <div class="item-promotion__text">
-                    <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
-                    <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
-                  </div>
-                  <div class="item-promotion__timer timer" id="timer-pensiya">
-                    <div class="timer__group timer__group_hours">00</div>
-                    <div class="timer__group timer__group_minutes">36</div>
-                    <div class="timer__group timer__group_seconds">48</div>
-                  </div>
-                  <button type="button" class="item-promotion__button" data-open-modal>
-                    Заказать по акции
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="promotions__slide swiper-slide">
-              <div class="item-promotion">
-                <div class="item-promotion__image">
-                  <img src="@img/promotions/05.jpg" alt="Promotions Image">
-                </div>
-                <div class="item-promotion__footer">
-                  <div class="item-promotion__icon">
-                    <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
-                  </div>
-                  <div class="item-promotion__text">
-                    <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
-                    <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
-                  </div>
-                  <div class="item-promotion__timer timer" id="timer-zacepy">
-                    <div class="timer__group timer__group_hours">00</div>
-                    <div class="timer__group timer__group_minutes">36</div>
-                    <div class="timer__group timer__group_seconds">48</div>
-                  </div>
-                  <button type="button" class="item-promotion__button" data-open-modal>
-                    Заказать по акции
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="promotions__slide swiper-slide">
-              <div class="item-promotion">
-                <div class="item-promotion__image">
-                  <img src="@img/promotions/06.jpg" alt="Promotions Image">
-                </div>
-                <div class="item-promotion__footer">
-                  <div class="item-promotion__icon">
-                    <img src="@img/promotions/icon.jpg" alt="Promotions Icon">
-                  </div>
-                  <div class="item-promotion__text">
-                    <span class="item-promotion__text_title">Оставьте заявку <span>сейчас</span></span>
-                    <span class="item-promotion__text_description">Получите подвязку для растений в подарок</span>
-                  </div>
-                  <div class="item-promotion__timer timer" id="timer-dostavka">
-                    <div class="timer__group timer__group_hours">00</div>
-                    <div class="timer__group timer__group_minutes">36</div>
-                    <div class="timer__group timer__group_seconds">48</div>
-                  </div>
-                  <button type="button" class="item-promotion__button" data-open-modal>
-                    Заказать по акции
-                  </button>
-                </div>
-              </div>
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
       </section>
       <section class="page__about about">
@@ -374,7 +375,7 @@
             по подходящим для вас параметрам в течение 1 минуты
           </p>
           <div class="individual-selection__form-wrap">
-            <form class="individual-selection__form-selection form-selection">
+            <form class="individual-selection__form-selection form-selection" autocomplete="off">
               <div class="form-selection__form-field">
                 <label class="form-selection__label" for="greenhouseLength">Длина</label>
                 <div class="form-selection__dropdown custom-dropdown" id="greenhouseLength">
@@ -542,6 +543,106 @@
           >
         </div>
       </section>
+      <section class="page__equipments equipments">
+        <div class="equipments__container">
+          <h2 class="title equipments__title">
+            Дополнительно к любой теплице вы можете приобрести
+          </h2>
+          <div class="equipments__grid">
+            <div class="equipments__item">
+              <div class="equipments__image-ibg">
+                <img src="@img/additional/side-window.jpg" alt="боковые форточки">
+              </div>
+              <div class="equipments__content">
+                <h4 class="equipments__content-title">Боковые форточки</h4>
+                <p class="equipments__content-desc">
+                  Дополнительные форточки позволяют регулировать уровень проветривания в теплице. Обычно их ставят 2 штуки.
+                </p>
+                <button class="button-form equipments__button" type="button">Заказать</button>
+              </div>
+            </div>
+            <div class="equipments__item">
+              <div class="equipments__image-ibg">
+                <img src="@img/additional/auto-ventilation.jpg" alt="Система автопроветривания">
+              </div>
+              <div class="equipments__content">
+                <h4 class="equipments__content-title">Система автопроветривания</h4>
+                <p class="equipments__content-desc">
+                  Ставится на боковую форточку. Форточка откроется автоматически, если температура в теплицы превысит 23 градуса.
+                </p>
+                <button class="button-form equipments__button" type="button">Заказать</button>
+              </div>
+            </div>
+            <div class="equipments__item">
+              <div class="equipments__image-ibg">
+                <img src="@img/additional/auto-watering.jpg" alt="Системы капельного полива">
+              </div>
+              <div class="equipments__content">
+                <h4 class="equipments__content-title">Системы капельного полива</h4>
+                <p class="equipments__content-desc">
+                  Позволяют автоматически без вашего участия поливать растения с заданным интервалом.
+                </p>
+                <button class="button-form equipments__button" type="button">Заказать</button>
+              </div>
+            </div>
+            <div class="equipments__item">
+              <div class="equipments__image-ibg">
+                <img src="@img/additional/beam.jpg" alt="Фундамент из бруса">
+              </div>
+              <div class="equipments__content">
+                <h4 class="equipments__content-title">Фундамент из бруса</h4>
+                <p class="equipments__content-desc">
+                  Фундамент для теплицы является дополнительной гарантией безопасности и долговечности сооружения.
+                </p>
+                <button class="button-form equipments__button" type="button">Заказать</button>
+              </div>
+            </div>
+            <div class="equipments__item">
+              <div class="equipments__image-ibg">
+                <img src="@img/additional/garters.jpg" alt="Система подвязывания растений">
+              </div>
+              <div class="equipments__content">
+                <h4 class="equipments__content-title">Система подвязывания растений</h4>
+                <p class="equipments__content-desc">
+                  Подрастающие кустики не всегда могут задерживать вес томатов, потому принципиально впору подвязать растение.
+                </p>
+                <button class="button-form equipments__button" type="button">Заказать</button>
+              </div>
+            </div>
+            <div class="equipments__item">
+              <div class="equipments__image-ibg">
+                <img src="@img/additional/beds.jpg" alt="Оцинкованные грядки">
+              </div>
+              <div class="equipments__content">
+                <h4 class="equipments__content-title">Оцинкованные грядки</h4>
+                <p class="equipments__content-desc">
+                  Оцинкованный бордюр используется для формирования грядок и клумб. Идеально подойдет для установки внутри теплиц любого размера.
+                </p>
+                <button class="button-form equipments__button" type="button">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <h2 class="title equipments__title" style="max-width: 100%;">
+            Забронируйте вашу теплицу прямо сейчас
+          </h2>
+          <p class="equipments__desc">
+            Склад в центре города.
+            <br>
+            Доставка и монтаж в день заказа
+          </p>
+          <form class="equipments__form" autocomplete="off">
+            <label class="equipments__field form-field">
+              <input type="text" class="equipments__input input-form _req" name="userName">
+              <span class="equipments__placeholder input-placeholder">Ваш имя:</span>
+            </label>
+            <label class="equipments__field form-field">
+              <input type="tel" class="equipments__input input-form _req" name="userPhone">
+              <span class="equipments__placeholder input-placeholder">Ваш номер:</span>
+            </label>
+            <button class="button-form" type="submit">Забронировать</button>
+          </form>
+        </div>
+      </section>
       <section class="page_reviews reviews">
         <div class="reviews__container">
           <h2 class="reviews__title title">
@@ -668,7 +769,7 @@
                   </a>
                 </div>
               </div>
-              <form class="feedback__form">
+              <form class="feedback__form" autocomplete="off">
                 <p class="feedback__form-title">Закажите консультацию менеджера на индивидуальный подбор теплицы</p>
                 <p class="feedback__form-subtitle">Перезвоним в течение 1 минуты</p>
                 <label class="feedback__form-field form-field">
