@@ -14,6 +14,8 @@
   // .page__individual-selection
   &__individual-selection {
   }
+  // .page__equipments
+  &__equipments {}
   // .page_reviews
   &_reviews {}
   // .page__feedback
@@ -43,7 +45,7 @@
   &:focus {
     border-color: $greenColor;
   }
-  &:focus + .input-placeholder {
+  &._focus + .input-placeholder {
     transform: translateY(rem(-22));
     background: #fff;
     color: $greenColor;

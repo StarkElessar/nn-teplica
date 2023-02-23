@@ -36,6 +36,10 @@
     width: 432px;
     height: 472px;
     filter: drop-shadow(0 0 10px rgba(#000, 30%));
+
+    img {
+      position: relative;
+    }
   }
   // .promo__title
   &__title {

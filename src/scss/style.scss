@@ -12,19 +12,21 @@
 @import 'config/base';
 @import 'config/common';
 
-@import 'layout/customDropdown';
-@import 'layout/map';
+@import 'components/loader';
+@import 'components/customDropdown';
+@import 'components/map';
 
-@import 'layout/header';
-@import 'layout/promo';
-@import 'layout/promotions';
-@import 'layout/about';
-@import 'layout/catalog';
-@import 'layout/individualSelection';
-@import 'layout/formSelection';
-@import 'layout/reviews';
-@import 'layout/sliderReviews';
-@import 'layout/feedback';
-@import 'layout/footer';
-@import 'layout/burgerMenu';
-@import 'layout/policy';
+@import 'components/header';
+@import 'components/promo';
+@import 'components/promotions';
+@import 'components/about';
+@import 'components/catalog';
+@import 'components/individualSelection';
+@import 'components/formSelection';
+@import 'components/reviews';
+@import 'components/sliderReviews';
+@import 'components/equipments';
+@import 'components/feedback';
+@import 'components/footer';
+@import 'components/burgerMenu';
+@import 'components/policy';
