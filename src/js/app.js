@@ -26,3 +26,10 @@ dropdownGroup()
 onFocusInput()
 onBlurInput()
 includeSliders()
+
+const items = document.querySelectorAll('.whyme__item')
+
+items.forEach((item) => {
+  const iconWrapper = item.querySelector('.whyme__icon')
+  item.append(iconWrapper.querySelector('img'))
+})
